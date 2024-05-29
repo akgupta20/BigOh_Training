@@ -76,5 +76,17 @@ function assertObjectsEqual(actual, expected, message) {
   const expected2 = { foo: 6, bar: 5 };
   console.log(
     assertObjectsEqual(actual2, expected2, "detects that two objects are equal")
-  ); // Output: FAILED Expected {"foo":6,"bar":5}, but got {"foo":5,"bar":6}
+    ); // Output: FAILED Expected {"foo":6,"bar":5}, but got {"foo":5,"bar":6}
+    
+
+    // doubtful case ask
+    const actual3 = { foo: 5, bar: function () { } };
+    const expected3 = { foo: 5, bar: function () { } };
+    console.log(
+      assertObjectsEqual(actual3, expected3, "detects that two objects are equal")
+    ); // Output: Passed
+
+    // In json stringify, functions are not stringified
+    console.log(JSON.stringify({ foo: 5, bar: function () { } })===JSON.stringify({ foo: 5, bar: function () { } })); // Output: false
+
 })();
