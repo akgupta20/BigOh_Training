@@ -1,3 +1,20 @@
+/*
+Qustion => Calculator: Expression 
+Description
+
+EditPreview     
+Implement a method that takes an expression and performs the calculation accordingly.
+example: calculation of [ 1+(2+3)*4-10/2 ]
+
+Note: Verify that BODMAS is applied in case of complex queries and the correct result is returned.
+ 
+Implement a method that takes an expression and performs the calculation accordingly.
+example: calculation of [ 1+(2+3)*4-10/2 ]
+
+Note: Verify that BODMAS is applied in case of complex queries and the correct result is returned.
+
+*/
+
 // function to get the precedence, the precedence of + and - are equal to 1, * & / are equal to 2
 function getPrecedence(ch) {
   if (ch == "*" || ch == "/") {
@@ -8,20 +25,20 @@ function getPrecedence(ch) {
 }
 
 function performOperation(ch1, ch2, op) {
-    switch (op) {
-        case "+":
-            return ch1 + ch2;
-        case "-":
-            return ch1 - ch2;
-        case "*":
-            return ch1 * ch2;
-        case "/":
-            return ch1 / ch2;
-    }
+  switch (op) {
+    case "+":
+      return ch1 + ch2;
+    case "-":
+      return ch1 - ch2;
+    case "*":
+      return ch1 * ch2;
+    case "/":
+      return ch1 / ch2;
+  }
 }
 
 function InfixEvaluation(expression) {
-  var stackOperand = []; // to store the operands 
+  var stackOperand = []; // to store the operands
   var stackOperator = []; // to store the operators
 
   // iterate through the expression
@@ -42,7 +59,6 @@ function InfixEvaluation(expression) {
             2. pop 1 operator
             3. perform the operation and push it.
     */
-        
     else if (ch == ")") {
       while (
         stackOperator.length &&
