@@ -1,3 +1,14 @@
+/*
+
+Calculator: Variable length arguments
+Description:
+Implement a calculator function that performs basic calculation operations but the number of arguments provided is not known beforehand.
+ex: Addition of 9,4,12,16,23 and 43
+
+*/
+
+
+
 // For infinite number of arguments, we used the rest operator
 function calculator(operation, ...args) { 
 

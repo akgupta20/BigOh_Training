@@ -1,17 +1,9 @@
 /*
-Qustion => Calculator: Expression 
+Calculator: Expression 
 Description
-
-EditPreview     
+   
 Implement a method that takes an expression and performs the calculation accordingly.
 example: calculation of [ 1+(2+3)*4-10/2 ]
-
-Note: Verify that BODMAS is applied in case of complex queries and the correct result is returned.
- 
-Implement a method that takes an expression and performs the calculation accordingly.
-example: calculation of [ 1+(2+3)*4-10/2 ]
-
-Note: Verify that BODMAS is applied in case of complex queries and the correct result is returned.
 
 */
 
