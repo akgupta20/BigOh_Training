@@ -38,7 +38,7 @@ function calculator(operation, ...args) {
             });
             break;
         default:
-            return "Unknown operation";
+            return "Invalid operation";
     }
     
     return result;
@@ -49,4 +49,4 @@ console.log(calculator("add", 9, 4, 12, 16, 23, 43)); // Output: 107
 console.log(calculator("subtract", 100, 20, 30)); // Output: 50
 console.log(calculator("multiply", 2, 3, -4)); // Output: -24
 console.log(calculator("divide", 100, 2, 5)); // Output: 10
-console.log(calculator('unknown', 1, 2, 3)); // Output: Unknown operation
+console.log(calculator('invalidOperation', 1, 2, 3)); // Output: Invalid operation
