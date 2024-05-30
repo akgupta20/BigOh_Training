@@ -6,7 +6,6 @@ Implement a method that takes an expression and performs the calculation accordi
 example: calculation of [ 1+(2+3)*4-10/2 ]
 
 */
-
 // function to get the precedence, the precedence of + and - are equal to 1, * & / are equal to 2
 function getPrecedence(ch) {
   if (ch == "*" || ch == "/") {
@@ -92,7 +91,7 @@ function InfixEvaluation(expression) {
 
   // When we didn't encounter ')' and also  the operator stack is not empty, then perform the operations.
   while (stackOperator.length) {
-    const op = stackOperator.pop();
+    const op = stackOperator.pop(); // op is not meaningful
     const secondOperand = stackOperand.pop();
     const firstOperand = stackOperand.pop();
     const result = performOperation(firstOperand, secondOperand, op);
@@ -103,5 +102,6 @@ function InfixEvaluation(expression) {
 }
 
 console.log(InfixEvaluation("1+(2+3)*4-8/2")); // 17
-console.log(InfixEvaluation("1+2")); // 3
+console.log(InfixEvaluation("1+2")); // 33
 console.log(InfixEvaluation("1+2+3*4")); // 7
+// read about naming conventions for the js
